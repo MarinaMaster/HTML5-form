@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+<div class="container">
+    <div class="container-form">
+        <div class="form-header">
+            <h1>Payment form example</h1>
+        </div>
+        <div class="form-body">
+            <div class="body--missing-form">
+                <p><b>Some field are missing</b></p>
+            </div>
+            <div class="body--card-info">
+                <div class="card-info--card-num">
+                    <label for="card">Card #</label>
+                    <input type="tel" id="card" inputmode="numeric" autocomplete="cc-number" maxlength="19"
+                           placeholder="xxxx xxxx xxxx xxxx" required/>
+                </div>
+                <div class="card-info--card-cvc">
+                    <label for="card-cvc">CVC #</label>
+                    <input type="tel" id="card-cvc" inputmode="numeric" autocomplete="cc-number" maxlength="4"
+                           placeholder="0000" required/>
+                </div>
+                <div class="card-info--card-amount">
+                    <label for="card-amount">Amount</label>
+                    <div class="card-amount-dollar">
+                        <i class="fa-solid fa-dollar-sign"></i>
+                        <input type="tel" id="card-amount" inputmode="numeric" autocomplete="cc-number" maxlength="20"
+                               placeholder="Amount" required/>
+                    </div>
+                </div>
+                </div>
+            <div class="body--human-info">
+            <div class="human-info--first-name">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name"  maxlength="10" required/>
+            </div>
+                <div class="human-info--last-name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name"  maxlength="10" required/>
+                </div>
+            </div>
+            <div class="body--address-info">
+                <div class="address-info--city">
+                    <label for="city">City</label>
+                    <input type="text" id="city"  maxlength="15" required/>
+                </div>
+            <div class="address-info--state">
+                <label for="states">State</label>
+                <select name="states" id="states" >
+                    <option value="Florida">Florida</option>
+                    <option value="California">California</option>
+                </select>
+            </div>
+            <div class="address-info--postal-code">
+                <div class="address-info--postal-code">
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal"  maxlength="6" required/>
+                </div>
+            </div>
+            </div>
+            <div class="body--credit-cards">
+                <div class="credit-cards--form">
+                    <p><b>We accept:</b></p>
+                    <div class="form--cards-container">
+                        <div class="container--card-box">
+                            <input type="radio" name="visa" value="visa" />
+                            <i class="fa-brands fa-cc-visa"></i>
+                        </div>
+                        <div class="container--card-box">
+                            <input type="radio" name="mastercard" value="mastercard" />
+                            <i class="fa-brands fa-cc-mastercard"></i>
+                        </div>
+                        <div class="container--card-box">
+                            <input type="radio" name="stripe" value="stripe" />
+                            <i class="fa-brands fa-cc-stripe"></i>
+                        </div>
+                        <div class="container--card-box">
+                            <input type="radio" name="paypal" value="paypal" />
+                            <i class="fa-brands fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="credit-cards--message">
+                    <div class="message-container">
+                    <p><b>Message</b></p>
+                    <input class="message-input" type="text" name="comment" />
+                        <p class="grey-comment">Add any notes here</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <div class="footer">
+            <div class="footer-container">
+                <input class ="grey-btn" type="submit" value="Cancel" />
+                <input class="blue-btn" type="submit" value="Send" />
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
